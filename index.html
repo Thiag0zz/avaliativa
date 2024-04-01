@@ -1,35 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Minha Página Web</title>
+    <style>
+        /* Estilos CSS podem ser adicionados aqui */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <h1>Meu Site</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Página Inicial</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Site Web</h1>
     </header>
 
-    <div class="container">
-        <h2>Bem-vindo ao Meu Site</h2>
-        <p>Este é um site de exemplo com um menu de navegação.</p>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Seja bem-vindo!</h2>
+        <p>Esta é a página inicial do meu site.</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Esta seção contém informações sobre mim ou sobre o meu site.</p>
+    </section>
+
+    <section id="cadastro">
+        <h2>Cadastro</h2>
+        <form action="processar_cadastro.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+   
+   
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-        </div>
-    </footer>
 </body>
 </html>
+
